@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-gitplace='/opt/docker/jupyter/data/jupyter  /root/jupyter/data/jupyter'
+gitplace='/opt/docker/jupyter/data/jupyter  /root/jupyter/data/jupyter /root/some_bashscript'
 
 for i in ${gitplace};do
 	if [ -d ${i} ];then
