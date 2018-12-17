@@ -86,7 +86,7 @@ wpimgs(){
 }
 
 systeminfo(){
-    source /opt/sg_deploy/shell/SystemInfo.sh
+    source https://github.com/zgcanfly/some_bashscipt/blob/master/GetSystemInfo.sh
 }
 deamon(){
     source /opt/sg_deploy/shell/deamon.sh
