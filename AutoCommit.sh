@@ -8,7 +8,7 @@ for i in ${gitplace};do
 		echo "开始pull $i"
 		cd ${i} && git pull --no-edit
 		echo "开始push $i"
-		cd ${i} && git add ${i} && git commit -m "automatic commit and push files"&& git push
+		cd ${i} && git add ${i} && git commit -m "automatic commit and push files" && git push ||git push
 	fi
 done
 
