@@ -1,4 +1,3 @@
-#!/usr/bin/env bash
 #!/bin/bash
 #author seven
 #每月执行一次即可

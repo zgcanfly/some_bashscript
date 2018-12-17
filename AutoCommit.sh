@@ -1,4 +1,5 @@
-#!/usr/bin/env bash
+#/bin/bash
+
 #建议添加进定时任务
 #* * * * * source /root/some_bashscript/AutoCommit.sh && echo "last update success:`date`">>/tmp/Autocommit.txt || echo "last update false:`date`">>/tmp/Autocommit.txt
 gitplace='/opt/docker/jupyter/data/jupyter/  /root/jupyter/data/jupyter /root/some_bashscript/'
