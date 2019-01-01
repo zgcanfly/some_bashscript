@@ -6,9 +6,9 @@ gitplace='/opt/docker/jupyter/data/jupyter/  /root/jupyter/data/jupyter /root/so
 for i in ${gitplace};do
 	if [ -d ${i} ];then
 
-		echo "开始pull $i"
+		echo "开始pull $i" >> /tmp/Autocommit.txt
 		cd ${i} && git pull --no-edit
-		echo "开始push $i"
+		echo "开始push $i" >> /tmp/Autocommit.txt
 		cd ${i} && git add . && git commit -m "automatic commit and push files" && git push ||git push
 	fi
 done
