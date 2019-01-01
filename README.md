@@ -1,2 +1,2 @@
-# some bash script for workplace
+# Some Bash Script For WorkPlace
 --
