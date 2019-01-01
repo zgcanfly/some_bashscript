@@ -1,7 +1,7 @@
 #/bin/bash
 
 #建议添加进定时任务
-#* * * * * /bin/bash  /root/some_bashscript/AutoCommit.sh && echo "last update success:`date`">>/tmp/Autocommit.txt || echo "last update false:`date`">>/tmp/Autocommit.txt
+#* * * * * /bin/bash  /root/some_bashscript/AutoCommit.sh && echo "last update success:`date +%F-%R`">>/tmp/Autocommit.txt || echo "last update false:`date +%F-%R`">>/tmp/Autocommit.txt
 gitplace='/opt/docker/jupyter/data/jupyter/  /root/jupyter/data/jupyter /root/some_bashscript/'
 for i in ${gitplace};do
 	if [ -d ${i} ];then
