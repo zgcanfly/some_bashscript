@@ -1,4 +1,3 @@
-#!/usr/bin/env bash
 #!/bin/bash
 text="default_up"
  grep -v -q "env.sh" /Users/codebayby/.bashrc || echo "source /opt/sg_deploy/shell/env.sh " >> /Users/codebayby/.bashrc

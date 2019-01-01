@@ -1,4 +1,3 @@
-#!/usr/bin/env bash
 #!/bin/bash
 #author: ZGYANG
 #date: 2017/7/4
