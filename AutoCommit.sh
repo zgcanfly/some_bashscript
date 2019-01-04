@@ -10,6 +10,7 @@ for i in ${gitplace};do
 		cd ${i} && git pull --no-edit
 		echo "开始push $i" >> /tmp/Autocommit.txt
 		cd ${i} && git add . && git commit -m "automatic commit and push files" && git push ||git push
+		echo "last update date:`date +%F-%R`">>/tmp/Autocommit.txt
 	fi
 done
 
