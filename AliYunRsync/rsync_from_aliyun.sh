@@ -5,15 +5,19 @@
 
 
 backalipath="/backup/aliyun/opt"
-backalizippath="/backup/aliyun/backzip"
+backalizippath="/backup/aliyun/backzip/"
 
-rsync -arlptgovPze "ssh" cortana:/opt  ${backalipath} --delete
+rsync -arlptgovPze "ssh" cortana:/opt/  ${backalipath} --delete
 
-tar -zcvf ${backalizippath}-`date +%F`.gzip ${backalipath}
+if [ -f ${backalizippath}-`date +%F`.gzi ];then
+	echo "已经备份"
+else
+	tar -zcvf ${backalizippath}-`date +%F`.gzip ${backalipath}
+fi
 
 rm -rf  ${backalizippath}-`date  -v -5d +%F`.gzip
-#rm -rf  ${backalizippath}-`date  -v -6d +%F`.gzip
-#rm -rf  ${backalizippath}-`date  -v -7d +%F`.gzip
+rm -rf  ${backalizippath}-`date  -v -6d +%F`.gzip
+rm -rf  ${backalizippath}-`date  -v -7d +%F`.gzip
 
 
 
