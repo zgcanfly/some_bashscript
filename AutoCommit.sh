@@ -5,6 +5,14 @@ fi
 #建议添加进定时任务
 #* * * * * /bin/bash  /root/some_bashscript/AutoCommit.sh && echo "last update success:`date +\%F-\%R`">>/tmp/Autocommit.txt || echo "last update false:`date +\%F-\%R`">>/tmp/Autocommit.txt
 gitdirectory='/opt/docker/jupyter/data/jupyter/  /root/jupyter/data/jupyter /root/some_bashscript/'
+
+#同步时间 方式github上时间戳不同步
+if ` command -v ntpdate` ;then
+    ntpdate ntp.ubuntu.com
+else
+    yum install -y ntpdate
+    ntpdate ntp.ubuntu.com
+fi
 for i in ${gitdirectory};do
 	if [ -d ${i} ];then
 
