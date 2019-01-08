@@ -8,10 +8,10 @@ gitdirectory='/opt/docker/jupyter/data/jupyter/  /root/jupyter/data/jupyter /roo
 
 #同步时间 方式github上时间戳不同步
 if ` command -v ntpdate` ;then
-    ntpdate ntp.ubuntu.com
+    `ntpdate ntp.ubuntu.com`
 else
     yum install -y ntpdate
-    ntpdate ntp.ubuntu.com
+    `ntpdate ntp.ubuntu.com`
 fi
 for i in ${gitdirectory};do
 	if [ -d ${i} ];then
