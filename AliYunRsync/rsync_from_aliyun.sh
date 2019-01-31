@@ -12,7 +12,7 @@ rsync -arlptgovPze "ssh" cortana:/opt/  ${backalipath} --delete
 
 																		#检测如果连上存储磁盘将文件移动至存储磁盘上，
 if [ -d ${backvolumes} ];then
-	mv ${backalizippath}/*.gzip ${backvolumes}
+	mv ${backalizippath}/*.gzip ${backvolumes}/
 
 fi
 
@@ -34,19 +34,21 @@ else                                                                   #备份�
 fi
 
 																		#删除5天后的备份文件
-for i in "/backup/aliyun/backzip Volumes/BackStrong/backups/aliyun";do
-rm -rf  ${i}/`date  -v -5d +%F`.gzip
-rm -rf  ${i}/`date  -v -6d +%F`.gzip
-rm -rf  ${i}/`date  -v -7d +%F`.gzip
-
-done
-
-
+#for i in "/backup/aliyun/backzip Volumes/BackStrong/backups/aliyun";do
+##rm -rf  ${i}/`date  -v -5d +%F`.gzip
+##rm -rf  ${i}/`date  -v -6d +%F`.gzip
+##rm -rf  ${i}/`date  -v -7d +%F`.gzip
 #
-#
-#rm -rf  ${backvolumes}/`date  -v -7d +%F`.gzip
-#rm -rf  ${backvolumes}/`date  -v -6d +%F`.gzip
-#rm -rf  ${backvolumes}/`date  -v -5d +%F`.gzip
+#done
+
+
+rm -rf  ${backalizippath}/`date  -v -7d +%F`.gzip
+rm -rf  ${backalizippath}/`date  -v -6d +%F`.gzip
+rm -rf  ${backalizippath}/`date  -v -5d +%F`.gzip
+
+rm -rf  ${backvolumes}/`date  -v -7d +%F`.gzip
+rm -rf  ${backvolumes}/`date  -v -6d +%F`.gzip
+rm -rf  ${backvolumes}/`date  -v -5d +%F`.gzip
 
 
 
