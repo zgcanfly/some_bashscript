@@ -6,12 +6,13 @@
 
 backalipath="/backup/aliyun/opt"
 backalizippath="/backup/aliyun/backzip"
-backvolumes="/Volumes/BackStrong/backups/aliyun"
+backvolumes="/Users/codebayby/mnt/backups/aliyun"
 
 rsync -arlptgovPze "ssh" cortana:/opt/  ${backalipath} --delete
 
 																		#检测如果连上存储磁盘将文件移动至存储磁盘上，
 if [ -d ${backvolumes} ];then
+
 	mv ${backalizippath}/*.gzip ${backvolumes}/
 
 fi
