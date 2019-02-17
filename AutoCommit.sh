@@ -4,7 +4,8 @@ if [ -f /etc/bashrc ];then
 fi
 #建议添加进定时任务
 #* * * * * /bin/bash  /root/some_bashscript/AutoCommit.sh && echo "last update success:`date +\%F-\%R`">>/tmp/Autocommit.txt || echo "last update false:`date +\%F-\%R`">>/tmp/Autocommit.txt
-gitdirectory='/opt/docker/jupyter/data/jupyter/  /root/jupyter/data/jupyter /root/some_bashscript/'
+gitdirectory='/opt/docker/jupyter/data/jupyter/  /root/jupyter/data/jupyter /root/some_bashscript/ /home/yang/jupyter/data/jupyter'
+
 
 #同步时间 方式github上时间戳不同步
 /usr/sbin/ntpdate  ntp.ubuntu.com
